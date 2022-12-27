@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Brutalist Style Menu</title>
+   <!-- stylesheet -->
+   <link rel="stylesheet" href="stylesheet.css">
+   <!-- google fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+   <!-- jquery + tweenmax cdns -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="menu-btn">menu</div>
+      <div class="menu-container">
+         <div class="items-section">
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">Our Story</a></li>
+               <li><a href="#">Portfolio</a></li>
+               <li><a href="#">Team</a></li>
+               <li><a href="#">Say Hello</a></li>
+            </ul>
+         </div>
+         <div class="project-section">
+            <ul>
+               <h1>Projects</h1>
+               <li>➤ <span>2021</span></li>
+               <li>➤ <span>2020</span></li>
+               <li>➤ <span>2019</span></li>
+               <li>➤ <span>2017</span></li>
+               <li>➤ <span>2015</span></li>
+            </ul>
+         </div>
+         <div class="mail-section">
+            <div class="txt">
+               <p>novacodeyt@gmail.com</p>
+            </div>
+         </div>
+         <div class="social-section">
+            <div class="txt">
+               <p><span>Instagram</span> / <span>Facebook</span> / <span>YouTube</span></p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      var t1 = new TimelineMax({paused: true});
+      t1.from(".menu-container", 1, {
+         left: "-25%",
+         ease: Power3.easeInOut
+      });
+
+      t1.reverse();
+         $(document).on("click", ".menu-btn", function() {
+         t1.reversed(!t1.reversed());
+      });
+   </script>
+</body>
+</html>
